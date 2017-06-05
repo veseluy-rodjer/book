@@ -4,7 +4,11 @@
 <title>PHP и HTML</title>
 </head>
 <body>
-<header><h1 align="center">Библиотека</h1></header>
+<header><h1 align="center" style="background: silver">Библиотека</h1>
+<?php
+echo '<p align="center"><b><a href="/book/">На главную</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/book/admin/">Админка</a></b></p>';
+?>
+</header>
 <?php
 echo '<form action="/book/admin/ins.php" method="post">
    <p>Жанр:&nbsp;<input name="name_genre" type="text" required></p>

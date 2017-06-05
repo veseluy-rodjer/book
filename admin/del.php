@@ -6,7 +6,7 @@
 <body>
 <?php
 $id_book = $_GET['id'];
-$link = new mysqli("localhost", "root", "111", 'yes');
+$link = new mysqli("localhost", "root", "", 'yes');
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: " . $link->connect_error;
 }

@@ -21,7 +21,7 @@ $description = trim($_POST['description']);
 $price = htmlspecialchars($_POST['price']);
 $price = urldecode($_POST['price']);
 $price = trim($_POST['price']);
-$link = new mysqli("localhost", "root", "111", 'yes');
+$link = new mysqli("localhost", "root", "", 'yes');
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: " . $link->connect_error;
 }

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Only for administrator!"
+AuthUserFile /var/www/html/book/admin/.htpasswd
+require valid-user

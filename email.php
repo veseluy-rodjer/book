@@ -16,7 +16,7 @@ $adr = trim($_POST['adr']);
 $count = htmlspecialchars($_POST['count']);
 $count = urldecode($_POST['count']);
 $count = trim($_POST['count']);
-$link = new mysqli("localhost", "root", "111", 'yes');
+$link = new mysqli("localhost", "root", "", 'yes');
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: " . $link->connect_error;
 }

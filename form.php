@@ -4,7 +4,11 @@
 <title>PHP и HTML</title>
 </head>
 <body>
-<header><h1 align="center">Библиотека</h1></header>
+<header><h1 align="center" style="background: silver">Библиотека</h1>
+<?php
+echo '<p align="center"><b><a href="/book/">На главную</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/book/admin/">Админка</a></b></p>';
+?>
+</header>
 <?php
 $id_book = $_GET['id'];
 echo '<form action="/book/email.php?id=' . $id_book . '" method="post">

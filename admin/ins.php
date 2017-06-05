@@ -20,7 +20,7 @@ $description = trim($_POST['description']);
 $price = htmlspecialchars($_POST['price']);
 $price = urldecode($_POST['price']);
 $price = trim($_POST['price']);
-$link = new mysqli("localhost", "root", "111", 'yes');
+$link = new mysqli("localhost", "root", "", 'yes');
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: " . $link->connect_error;
 }
@@ -57,7 +57,7 @@ $id_author = $row['id_author'];
 if (!$link->query('insert into book (name_book, description, price, id_genre, id_author) values ("' . $name_book . '", "' . $description . '", "' . $price . '", "' . $id_genre . '", "' . $id_author . '")')) {
     echo "Не удалось внести изменнения в book: (" . $link->errno . ") " . $link->error;
 }
-$res = $link->query('select * from genre, author, book where genre.id_genre=book.id_genre and author.id_author=book.id_author having name_book=' . $name_book . '');
+$res = $link->query('select * from genre, author, book where genre.id_genre=book.id_genre and author.id_author=book.id_author having name_book="' . $name_book . '"');
 $row = $res->fetch_assoc();
 $row = '<br>Вы добавили книгу: Жанр: ' . $row['name_genre'] . '; Автор: ' . $row['name_author'] . '; Название книги: ' . $row['name_book'] . '; Описание: ' . $row['description'] . '; Цена: ' . $row['price'] . '.';
 echo $row;

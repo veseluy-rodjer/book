@@ -4,9 +4,13 @@
 <title>PHP и HTML</title>
 </head>
 <body>
-<header><h1 align="center">Библиотека</h1></header>
+<header><h1 align="center" style="background: silver">Библиотека</h1>
 <?php
-$link = new mysqli("localhost", "root", "111", 'yes');
+echo '<p align="center"><b><a href="/book/admin/"a>Админка</a></b></p>';
+?>
+</header>
+<?php
+$link = new mysqli("localhost", "root", "", 'yes');
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: " . $link->connect_error;
 }

@@ -20,7 +20,11 @@
 </style>
 </head>
 <body>
-<header><h1 align="center">Библиотека</h1></header>
+<header><h1 align="center" style="background: silver">Библиотека</h1>
+<?php
+echo '<p align="center"><b><a href="/book/">На главную</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/book/admin/">Админка</a></b></p>';
+?>
+</header>
 <table>
   <tr>
     <td>Жанр</td>
@@ -30,7 +34,7 @@
   </tr>
 
 <?php
-$link = new mysqli("localhost", "root", "111", 'yes');
+$link = new mysqli("localhost", "root", "", 'yes');
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: " . $link->connect_error;
 }
