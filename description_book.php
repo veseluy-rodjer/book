@@ -41,6 +41,7 @@ if ($link->connect_errno) {
 $res = $link->query('select * from book where id_book=' . $id_book . '');
 $row = $res->fetch_assoc();
 echo '<tr><th>' . $row['description'] . '</th><th>' . $row['price'] . '</th><th><a href="/book/form.php?id=' . $id_book . '"><p>Оформить заказ</p></a></th></tr>';
+$link->close();
 ?>
 
 </table>

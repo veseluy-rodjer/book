@@ -30,6 +30,7 @@ for ($row_no = 0; $row_no <= $res->num_rows - 1; $row_no++) {
     $id_author = $row['id_author'];
     echo '<b><a href="/book/admin/list_book.php?id_author=' . $id_author . '">' . $row['name_author'] . '</a></b>;&nbsp;&nbsp;&nbsp;';
 }
+$link->close();
 ?>
 </table>
 </body>

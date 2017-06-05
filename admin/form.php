@@ -24,6 +24,7 @@ echo '<form action="/book/admin/edit.php?id=' . $id_book . '" method="post">
    <p>Описание:&nbsp;<input name="description" type="text" value="' . $row['description'] . ' " required></p>
    <p>Цена:&nbsp;<input name="price" type="text" value="' . $row['price'] . ' " required></p>
    <p><input type="submit"></p></form>'
+$link->close();
 ?>
 </body>
 </html>

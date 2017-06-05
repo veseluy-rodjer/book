@@ -56,6 +56,7 @@ if ($id_author = $_GET['id_author']) {
     echo '<tr><th><a href="/book/description_book.php?id=' . $id_book . '">' . $row['name_genre'] . '</a></th><th><a href="/book/description_book.php?id=' . $id_book . '">' . $row['name_author'] . '</a></th><th><a href="/book/description_book.php?id=' . $id_book . '">' . $row['name_book'] . '</a></th><th><a href="/book/description_book.php?id=' . $id_book . '">' . $row['price'] . '</a></th></tr>';
   }
 }
+$link->close();
 ?>
 
 </table>
